@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="w-full max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8">
+    <div class="flex justify-between items-center mb-6">
+        <!-- Welcome Header -->
+        <h2 class="text-3xl font-bold text-gray-800">Welcome, {{ user.username }}!</h2>
+        <!-- Logout Button -->
+        <a href="{% url 'login' %}" 
+        onclick="return confirm('Are you sure you want to log out?')" 
+           class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-300">
+            Logout
+        </a>
+    </div>
+    
+    <!-- Grid Sections -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Profile Section -->
+        <div class="bg-blue-100 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-blue-800 mb-4">Profile</h3>
+            <p class="text-blue-600"><strong>Username:</strong> {{ user.username }}</p>
+            <p class="text-blue-600"><strong>Email:</strong> {{ user.email }}</p>
+        </div>
+        
+        <!-- Account Details Section -->
+        <div class="bg-green-100 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-green-800 mb-4">Account Details</h3>
+            <p class="text-green-600"><strong>Joined:</strong> {{ user.date_joined|date:"F d, Y" }}</p>
+            <p class="text-green-600"><strong>Last Login:</strong> {{ user.last_login|date:"F d, Y, H:i A" }}</p>
+        </div>
+        
+        <!-- Actions Section -->
+        <div class="bg-yellow-100 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold text-yellow-800 mb-4">Actions</h3>
+            <ul class="space-y-2">
+                <li>
+                    <a href="{% url 'edit_profile' %}" 
+                       class="text-yellow-700 hover:underline">
+                        Edit Profile
+                    </a>
+                </li>  
+                <li>
+                    <a href="{% url 'change_password' %}" 
+                       class="text-yellow-700 hover:underline">
+                        Change Password
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
