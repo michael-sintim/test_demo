@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<article class="bg-white shadow-md rounded-lg p-6">
+    <h1 class="text-4xl font-bold mb-4">{{ post.title }}</h1>
+    <p class="text-gray-500 mb-6">Published on: {{ post.created_at }}</p>
+    <div class="prose">
+        <p>{{ post.body }}</p>
+    </div>
+</article>
+<a href="/" class="text-blue-600 hover:underline mt-6 block">Back to Post List</a>
+{% endblock %}
