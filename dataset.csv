@@ -1,0 +1,24 @@
+date,stock_symbol,open_price,close_price,volume,change_percentage
+2024-01-15,AAPL,182.50,185.75,5000000,1.25
+2024-01-16,GOOGL,135.25,137.60,3500000,1.73
+2024-01-17,MSFT,350.80,352.45,2800000,0.47
+
+sample_id,temperature,humidity,ph_level,growth_rate,plant_type
+S001,22.5,65.3,6.8,0.75,Tomato
+S002,23.1,62.7,7.1,0.68,Pepper
+S003,21.9,64.5,6.5,0.82,Cucumber
+
+employee_id,department,salary,performance_score,years_of_service,bonus
+E001,Sales,55000,4.5,3,2750.25
+E002,Marketing,60000,4.2,5,3000.50
+E003,Engineering,75000,4.8,2,3750.75
+
+customer_id,name,age,email,total_purchases,loyalty_level
+1001,John Doe,35,john@email.com,1500.50,Gold
+1002,Jane Smith,28,jane@email.com,750.25,Silver
+1003,Mike Johnson,42,mike@email.com,3000.75,Platinum
+
+date,product,quantity,price,category,region
+2024-01-15,Laptop,5,1200.50,Electronics,North
+2024-01-16,Smartphone,3,800.25,Electronics,East
+2024-01-17,Tablet,2,450.75,Electronics,West
